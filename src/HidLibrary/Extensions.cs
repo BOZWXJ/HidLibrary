@@ -4,9 +4,9 @@ namespace HidLibrary
 {
     public static class Extensions
     {
-        public static string ToUTF8String(this byte[] buffer)
+        public static string ToDefaultString(this byte[] buffer)
         {
-            var value = Encoding.UTF8.GetString(buffer);
+            var value = Encoding.Default.GetString(buffer);
             return value.Remove(value.IndexOf((char)0));
         }
 
